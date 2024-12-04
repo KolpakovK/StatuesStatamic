@@ -1,0 +1,42 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* This is all you. */
+@layer components{
+    .bard{
+        @apply flex flex-col gap-2 font-light;
+    }
+
+    .bard p{
+        @apply text-base
+    }
+
+    .bard-large{
+        @apply flex flex-col gap-4 font-light;
+    }
+
+    .bard-large p{
+        @apply text-2xl
+    }
+
+    .btn{
+        @apply flex items-center gap-2 leading-none text-xl text-white px-4 h-12 bg-orange-600 w-fit hover:opacity-75
+    }
+
+    .input{
+        @apply mb-12
+    }
+
+    .input label{
+        @apply text-xl font-extralight text-white/75
+    }
+
+    .input input{
+        @apply w-full bg-transparent border-b border-white p-3 text-xl text-white
+    }
+
+    .input textarea{
+        @apply w-full bg-transparent border-b border-white p-3 text-xl text-white
+    }
+}

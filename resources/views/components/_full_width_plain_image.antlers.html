@@ -1,0 +1,22 @@
+<div class="{{ if background }} bg-black {{/if}}">
+    <img src="{{ image.url }}" alt="{{ image.alt }}" class="w-full h-full object-cover aspect-[9/16] lg:aspect-[7/3]" x-data="scaleUpOnScroll">
+</div>
+
+<script defer>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('scaleUpOnScroll', () => ({
+            init() {
+            gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger
+            gsap.from(this.$el, {
+                scale: 0.9,
+                scrollTrigger: {
+                trigger: this.$el,
+                start: "top top",
+                end: "+=500",
+                scrub: true,
+                }
+            });
+            }
+        }));
+    });
+</script>

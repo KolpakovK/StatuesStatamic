@@ -1,0 +1,122 @@
+title: 'Page builder'
+fields:
+  -
+    handle: blocks
+    field:
+      type: replicator
+      display: Blocks
+      sets:
+        hero:
+          display: Hero
+          icon: computer-desktop
+          sets:
+            full_width_image:
+              display: 'Full width image'
+              fields:
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    container: assets
+                    type: assets
+                    display: Image
+                -
+                  import: text_block
+                -
+                  import: action
+        feature:
+          display: Feature
+          icon: form-text-field
+          sets:
+            image_left:
+              display: 'Image left'
+              fields:
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    container: assets
+                    type: assets
+                    display: Image
+                -
+                  import: text_block
+                -
+                  import: action
+            image_right:
+              display: 'Image right'
+              fields:
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    container: assets
+                    type: assets
+                    display: Image
+                -
+                  import: text_block
+                -
+                  import: action
+            image_grid_option_1:
+              display: 'Image grid option 1'
+              fields:
+                -
+                  handle: images
+                  field:
+                    max_files: 3
+                    min_files: 3
+                    container: assets
+                    type: assets
+                    display: Images
+                -
+                  import: text_block
+                -
+                  import: action
+            image_grid_option_2:
+              display: 'Image grid option 2'
+              fields:
+                -
+                  handle: images
+                  field:
+                    max_files: 2
+                    min_files: 2
+                    container: assets
+                    type: assets
+                    display: Images
+                -
+                  import: text_block
+                -
+                  import: action
+        misc:
+          display: Misc
+          icon: alert-help-question
+          sets:
+            full_width_plain_image:
+              display: 'Full width plain image'
+              fields:
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    container: assets
+                    type: assets
+                    display: Image
+                -
+                  handle: background
+                  field:
+                    type: toggle
+                    display: Background
+            image_gallery:
+              display: 'Image gallery'
+              fields:
+                -
+                  handle: images
+                  field:
+                    max_files: 4
+                    min_files: 4
+                    container: assets
+                    type: assets
+                    display: Images

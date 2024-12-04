@@ -1,0 +1,11 @@
+title: Company
+data:
+  footer:
+    title: 'Spremni ste unijeti umjetnost u svoj brend?'
+    description:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Kontaktirajte nas kako bismo zajedno stvorili skulpturu koja savršeno odražava vaš identitet i priča priču vašeg brenda. Pretvorimo vaše ideje u bezvremensko umjetničko djelo.'

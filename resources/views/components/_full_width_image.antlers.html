@@ -1,0 +1,45 @@
+<div class="w-full relative overflow-hidden aspect-[9/16] lg:aspect-[7/3] flex items-end py-20" x-data="shrinkOnScroll">
+    <img src="{{ image.url }}" alt="{{ image.alt }}" class="w-full h-full object-cover absolute z-10 top-0 left-0"> 
+    <div class="absolute left-0 top-0 w-full h-full bg-rangitoto-500 mix-blend-multiply opacity-50 z-10"></div>
+    
+    <div class="z-20 w-full px-4 lg:px-20 grid grid-cols-2 lg:grid-cols-8 gap-6 items-end">
+        <div class="flex flex-col gap-3 lg:mb-20 col-span-2 lg:col-span-6">
+            {{ if headline }}
+                <h1 class=" text-white leading-tight text-4xl lg:text-[6rem] font-light uppercase">{{ headline }}</h1>
+            {{ /if }}
+            {{ if sub_heading }}
+                <div class=" text-white/75 leading-tight text-2xl font-light uppercase">{{ sub_heading }}</div>
+            {{ /if }}
+        </div>
+        
+        <div class="flex flex-col gap-6 col-span-1 col-start-2 lg:col-span-2 lg:col-start-7">
+            {{ if description }}
+                <div class="text-white/80 bard lg:bard-large">{{ description }}</div>
+            {{ /if }}
+            {{ if action.link }}
+                <a href="{{ action.link }}" class="btn">{{ action.title }}</a>
+            {{ /if }}
+        </div>
+    </div>
+</div>
+<div class="h-10 lg:h-32"></div>
+
+<script defer>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('shrinkOnScroll', () => ({
+            init() {
+            gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger
+            gsap.to(this.$el, {
+                scale: 0.9,
+                scrollTrigger: {
+                trigger: this.$el,
+                start: "top top",
+                end: "+=500",
+                scrub: true,
+                }
+            });
+            }
+        }));
+    });
+</script>
+  

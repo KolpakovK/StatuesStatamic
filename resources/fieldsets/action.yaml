@@ -1,0 +1,18 @@
+title: Action
+fields:
+  -
+    handle: action
+    field:
+      type: group
+      display: Action
+      fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: link
+          field:
+            type: link
+            display: Link

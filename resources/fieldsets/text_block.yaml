@@ -1,0 +1,21 @@
+title: 'Text block'
+fields:
+  -
+    handle: headline
+    field:
+      type: text
+      display: Headline
+  -
+    handle: sub_heading
+    field:
+      remove_empty_nodes: false
+      container: assets
+      type: bard
+      display: 'Sub heading'
+  -
+    handle: description
+    field:
+      remove_empty_nodes: false
+      container: assets
+      type: bard
+      display: Description

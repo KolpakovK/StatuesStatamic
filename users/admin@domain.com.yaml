@@ -1,0 +1,8 @@
+super: true
+name: Admin
+id: 497307b4-48be-4657-8c34-239ee1fe4a9e
+password_hash: $2y$12$2sGl29Vx9uHYtqhed8.kdOo8CDLFZzEsjR4oVyWSGF3w/qXmGJDc6
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing
