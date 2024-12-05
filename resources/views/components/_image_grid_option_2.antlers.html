@@ -20,10 +20,27 @@
                 {{ /if }}
             </div>
 
-            <img src="{{ images:0.url }}" alt="{{ images:0.alt }}" class="w-full aspect-video background" data-speed="0.4">
+            {{ if images:0.is_video  }}
+                <video autoplay loop muted playsinline class="w-full aspect-video object-cover background" data-speed="0.4">
+                    <source src="{{ images:0.url }}" type="video/mp4">
+                </video>
+            {{ else }}
+                <img src="{{ images:0.url }}" alt="{{ images:0.alt }}" class="w-full aspect-video object-cover background" data-speed="0.4">
+            {{ /if }}
+
+            
 
         </div>
 
-        <img src="{{ images:0.url }}" alt="{{ images:0.alt }}" class="w-full aspect-[9/16] object-cover background col-span-1 col-start-2 lg:col-span-3 lg:col-start-6" data-speed="0.1">
+
+        {{ if images:1.is_video  }}
+            <video autoplay loop muted playsinline class="w-full aspect-[9/16] object-cover background col-span-1 col-start-2 lg:col-span-3 lg:col-start-6" data-speed="0.1">
+                <source src="{{ images:1.url }}" type="video/mp4">
+            </video>
+        {{ else }}
+            <img src="{{ images:1.url }}" alt="{{ images:1.alt }}" class="w-full aspect-[9/16] object-cover background col-span-1 col-start-2 lg:col-span-3 lg:col-start-6" data-speed="0.1">
+        {{ /if }}
+
+        
     </div>
 </div>

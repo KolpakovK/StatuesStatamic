@@ -4,11 +4,11 @@ blueprint: pages
 title: Home
 template: page
 updated_by: 497307b4-48be-4657-8c34-239ee1fe4a9e
-updated_at: 1733329455
+updated_at: 1733421495
 blocks:
   -
     id: m4a0v7jm
-    image: placeholder.jpg
+    image: sculpture1-(2)-(1).mp4
     headline: 'Umjetnički studio za vrhunske brendove'
     description:
       -
@@ -24,7 +24,7 @@ blocks:
     enabled: true
   -
     id: m4a1aft0
-    image: placeholder.jpg
+    image: 20240913_051351197_ios-kopiia-(2).jpg
     headline: 'U MEI-u vjerujemo da svaka priča zaslužuje svoj oblik, a svako postignuće svoj simbol.'
     description:
       -
@@ -58,9 +58,9 @@ blocks:
     type: image_grid_option_1
     enabled: true
     images:
-      - placeholder.jpg
-      - placeholder1.jpg
-      - placeholder2.jpg
+      - sculpture3-(1).mp4
+      - 20240913_051351197_ios-kopiia-(3).jpg
+      - sculpture2-(1).mp4
     headline: 'Ostavite trajan dojam s MEI logo skulpturama'
     sub_heading:
       -
@@ -78,15 +78,15 @@ blocks:
             text: 'Naše MEI logo skulpture unose identitet vašeg brenda u jedinstveni, opipljivi oblik—idealne su za nagrade zaposlenicima, korporativne poklone ili upečatljiv uredski dekor. Precizno izrađene i dizajnirane s dozom stila, MEI logo skulpture omogućuju vašem brendu da govori sam za sebe, ostavljajući trajan dojam.'
   -
     id: m4a2yqgl
-    image: placeholder.jpg
+    image: img_2344-kopiia.jpg
     type: full_width_plain_image
     enabled: true
     background: false
   -
     id: m4a34pw5
     images:
-      - placeholder.jpg
-      - placeholder1.jpg
+      - img_2346.jpg
+      - img_3193.jpg
     headline: 'Uhvatite bit svog brenda uz MEI skulpture s elementima brenda'
     sub_heading:
       -
