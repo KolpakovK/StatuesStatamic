@@ -4,7 +4,7 @@ blueprint: pages
 title: Home
 template: page
 updated_by: 497307b4-48be-4657-8c34-239ee1fe4a9e
-updated_at: 1733421495
+updated_at: 1733434532
 blocks:
   -
     id: m4a0v7jm
@@ -50,18 +50,26 @@ blocks:
       link: null
     type: image_left
     enabled: true
+    background: false
   -
-    id: m4a2fcjw
-    action:
-      title: 'Pogledaj radove'
-      link: 'entry::e3548018-bea6-4d28-921a-fabfb4c4d569'
-    type: image_grid_option_1
-    enabled: true
+    id: m4bsg4wj
     images:
-      - sculpture3-(1).mp4
+      - 20240913_051351197_ios-kopiia-(1).jpg
+      - 20240913_051351197_ios-kopiia-(2).jpg
       - 20240913_051351197_ios-kopiia-(3).jpg
-      - sculpture2-(1).mp4
-    headline: 'Ostavite trajan dojam s MEI logo skulpturama'
+      - 20240913_051351197_ios-kopiia-(4).jpg
+    background: false
+    type: image_gallery_option_2
+    enabled: true
+  -
+    id: m4btkp9v
+    text: 'Ostavite trajan dojam s MEI logo skulpturama'
+    background: false
+    type: quote
+    enabled: true
+  -
+    id: m4bq2elc
+    image: sculpture2-(1).mp4
     sub_heading:
       -
         type: paragraph
@@ -76,6 +84,12 @@ blocks:
           -
             type: text
             text: 'Naše MEI logo skulpture unose identitet vašeg brenda u jedinstveni, opipljivi oblik—idealne su za nagrade zaposlenicima, korporativne poklone ili upečatljiv uredski dekor. Precizno izrađene i dizajnirane s dozom stila, MEI logo skulpture omogućuju vašem brendu da govori sam za sebe, ostavljajući trajan dojam.'
+    action:
+      title: 'Pogledaj radove'
+      link: '#'
+    type: image_right
+    enabled: true
+    background: false
   -
     id: m4a2yqgl
     image: img_2344-kopiia.jpg
@@ -83,11 +97,14 @@ blocks:
     enabled: true
     background: false
   -
-    id: m4a34pw5
-    images:
-      - img_2346.jpg
-      - img_3193.jpg
-    headline: 'Uhvatite bit svog brenda uz MEI skulpture s elementima brenda'
+    id: m4btos9f
+    text: 'Uhvatite bit svog brenda uz MEI skulpture s elementima brenda'
+    background: true
+    type: quote
+    enabled: true
+  -
+    id: m4btt1xf
+    image: img_3193.jpg
     sub_heading:
       -
         type: paragraph
@@ -103,9 +120,20 @@ blocks:
             type: text
             text: 'Inspirirane vašom misijom, vrijednostima ili vizualnim identitetom, ove skulpture idealne su za proslavu timskih postignuća ili dodavanje sofisticirane note vašem prostoru. MEI skulpture pretvaraju karakter vašeg brenda u impresivno umjetničko djelo.'
     action:
-      title: 'Pogledaj radove'
-      link: '#'
-    type: image_grid_option_2
+      title: null
+      link: null
+    background: true
+    type: image_left
+    enabled: true
+  -
+    id: m4bu5rnv
+    images:
+      - 20240913_051351197_ios-kopiia-(1).jpg
+      - 20240913_051351197_ios-kopiia-(2).jpg
+      - 20240913_051351197_ios-kopiia-(3).jpg
+      - 20240913_051351197_ios-kopiia-(4).jpg
+    background: true
+    type: image_gallery_option_3
     enabled: true
 ---
 ## Welcome to your brand new Statamic site!

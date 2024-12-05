@@ -1,0 +1,45 @@
+<div class="px-4 pb-20 py-10 lg:px-20 lg:py-20 {{ if background }} dark bg-rangitoto-800 {{ /if }}">
+    <blockquote class="text-rangitoto-950 dark:text-white text-2xl lg:text-8xl uppercase leading-tight" x-data="quoteAnimation">
+        <p class="quote-text">{{ text }}</p>
+    </blockquote>
+</div>
+
+<script defer>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('quoteAnimation', () => ({
+            init() {
+                gsap.registerPlugin(ScrollTrigger);
+
+                // Select the quote element
+                const quoteText = this.$el.querySelector('.quote-text');
+
+                // Split the quote into individual words
+                const words = quoteText.textContent.split(' ');
+                quoteText.innerHTML = ''; // Clear the text in the DOM
+
+                // Create spans for each word and append to the element
+                words.forEach((word, index) => {
+                    const wordSpan = document.createElement('span');
+                    wordSpan.textContent = word + ' '; // Add a space after each word
+                    wordSpan.style.opacity = 0; // Hide initially
+                    quoteText.appendChild(wordSpan);
+                });
+
+                // Animate each word
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: quoteText,
+                        start: "top 80%", // Start animation when quote is 80% into viewport
+                        end: "top 20%",  // End when the quote reaches 20% of the viewport
+                        scrub: true,    // Run animation independently of scroll
+                    }
+                });
+
+                // Animate each word sequentially
+                gsap.utils.toArray(quoteText.children).forEach((word, i) => {
+                    tl.to(word, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, i * 0.2);
+                });
+            }
+        }));
+    });
+</script>

@@ -29,6 +29,19 @@ fields:
           display: Feature
           icon: form-text-field
           sets:
+            quote:
+              display: 'Quote'
+              fields:
+                -
+                  handle: text
+                  field:
+                    type: text
+                    display: Text
+                -
+                  handle: background
+                  field:
+                    type: toggle
+                    display: Background
             image_left:
               display: 'Image left'
               fields:
@@ -44,6 +57,11 @@ fields:
                   import: text_block
                 -
                   import: action
+                -
+                  handle: background
+                  field:
+                    type: toggle
+                    display: Background
             image_right:
               display: 'Image right'
               fields:
@@ -59,6 +77,11 @@ fields:
                   import: text_block
                 -
                   import: action
+                -
+                  handle: background
+                  field:
+                    type: toggle
+                    display: Background
             image_grid_option_1:
               display: 'Image grid option 1'
               fields:
@@ -74,6 +97,11 @@ fields:
                   import: text_block
                 -
                   import: action
+                -
+                  handle: background
+                  field:
+                    type: toggle
+                    display: Background
             image_grid_option_2:
               display: 'Image grid option 2'
               fields:
@@ -89,6 +117,11 @@ fields:
                   import: text_block
                 -
                   import: action
+                -
+                  handle: background
+                  field:
+                    type: toggle
+                    display: Background
         misc:
           display: Misc
           icon: alert-help-question
@@ -120,3 +153,40 @@ fields:
                     container: assets
                     type: assets
                     display: Images
+                -
+                  handle: background
+                  field:
+                    type: toggle
+                    display: Background
+            image_gallery_option_2:
+              display: 'Image gallery option 1'
+              fields:
+                -
+                  handle: images
+                  field:
+                    max_files: 4
+                    min_files: 4
+                    container: assets
+                    type: assets
+                    display: Images
+                -
+                  handle: background
+                  field:
+                    type: toggle
+                    display: Background
+            image_gallery_option_3:
+              display: 'Image gallery option 1'
+              fields:
+                -
+                  handle: images
+                  field:
+                    max_files: 4
+                    min_files: 4
+                    container: assets
+                    type: assets
+                    display: Images
+                -
+                  handle: background
+                  field:
+                    type: toggle
+                    display: Background

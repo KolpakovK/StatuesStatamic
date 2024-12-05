@@ -2,6 +2,12 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+
+.freeze-scroll {
+    overflow: hidden;
+    pointer-events: none;
+}
+
 /* This is all you. */
 @layer components{
     .bard{

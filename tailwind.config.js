@@ -7,7 +7,7 @@ export default {
         './resources/**/*.vue',
         './content/**/*.md',
     ],
-
+    darkMode:"class",
     theme: {
         extend: {
             fontFamily:{
