@@ -18,4 +18,12 @@ export default defineConfig({
         }),
         // vue2(),
     ],
+    build: {
+        assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf'], // Optional, explicitly include font extensions.
+    },
+    resolve: {
+        alias: {
+            '@': '/resources', // Optional, allows for cleaner imports if you need to reference assets directly.
+        },
+    },
 });
