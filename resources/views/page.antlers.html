@@ -1,3 +1,233 @@
-{{ blocks }}
-  {{ partial src="components/{type}" }}
-{{ /blocks }}
+<!-- HERO -->
+<div class="h-screen overflow-hidden flex items-center justify-center relative" id="hero">
+    <!-- Image with Reveal Mask -->
+    <div class="absolute inset-0 bg-cover bg-center" id="image-mask">
+        <img src="/assets/render1.jpg" alt="HERO" class="w-full h-full object-cover brightness-[.3]">
+    </div>
+
+    <!-- Text Content -->
+    <div class="z-50 px-4 container">
+        <h1 class="text-white font-display text-4xl lg:text-[128px] leading-tight uppercase text-center lg:px-40 w-full" id="hero-heading">
+            Umjetnički studio za vrhunske brendove
+        </h1>
+        <p class="text-lg lg:text-2xl opacity-75 text-white leading-snug w-full text-center lg:max-w-sm lg:mx-auto" id="subtitle">
+            MEI — Stvaramo skulpture koje pričaju priče vodećih brendova.
+        </p>
+    </div>
+
+    <!-- Footer Content -->
+    <div class="hidden lg:flex left-0 bottom-0 px-8 py-4 items-center gap-4 absolute">
+        <p class="text-white/75 leading-none text-lg">Name of work</p>
+        <p class="text-white/75 leading-none text-lg">Date of creation</p>
+    </div>
+
+    <div class="absolute right-0 bottom-0 bg-[#F5F0ED] px-8 py-4 flex items-center gap-4">
+        <p class="text-black leading-none text-lg cursor-pointer hover:underline">Instagram</p>
+        <div class="w-[1px] h-[20px] bg-black"></div>
+        <p class="text-black leading-none text-lg cursor-pointer hover:underline">Facebook</p>
+        <div class="w-[1px] h-[20px] bg-black"></div>
+        <p class="text-black leading-none text-lg cursor-pointer hover:underline">Kontakti</p>
+    </div>
+</div>
+
+<script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Automatically wrap each word in the hero heading
+        const heroHeading = document.getElementById('hero-heading');
+        heroHeading.innerHTML = heroHeading.textContent
+            .split(' ') // Split text into words
+            .map(word => `<span class="word">${word}</span>`) // Wrap each word in a span
+            .join(' '); // Rejoin the words with spaces
+
+        // Image Reveal Animation
+        gsap.fromTo(
+            "#image-mask img",
+            { clipPath: "inset(0 0 100% 0)", scale: 1.2 }, // Start fully masked
+            {
+                clipPath: "inset(0 0 0% 0)", // Unmask top to bottom
+                duration: 1.5,
+                scale: 1,
+            }
+        );
+
+        // Headline Word-by-Word Animation
+        gsap.fromTo(
+            "#hero-heading .word",
+            { opacity: 0, y: 60 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 2,
+                stagger: 0.1,
+            }
+        );
+
+        // Subtitle Fade In
+        gsap.fromTo(
+            "#subtitle",
+            { opacity: 0, y: 20 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.5,
+                delay: 2,
+            }
+        );
+    });
+
+</script>
+
+
+<!-- SECTION 1 -->
+<div class="pt-20 lg:pt-52">
+    <div class="px-4 container grid grid-cols-2 lg:grid-cols-8 gap-6 lg:items-center mx-auto">
+        <div class="col-span-2 lg:col-span-4 translate-y-1/4">
+            <img src="/assets/combinedrender-1.jpg" alt="Combined" class="aspect-[5/6] object-cover max-h-[700px] mx-auto background" data-speed="0.5" data-mobile-speed="0">
+        </div>
+
+        <div class="col-span-2 lg:col-span-3">
+            <h2 class="text-3xl lg:text-5xl leading-tight text-black mb-8">U MEI-u vjerujemo da svaka priča zaslužuje svoj oblik, a svako postignuće svoj simbol.</h2>
+            <p class="text-lg lg:text-2xl leading-snug text-black/75 font-light mb-8">Naše skulpture spajaju inovativnost i apstraktnu ljepotu, nadahnute smjelim grafičkim elementima Amelo Designa, uz korištenje visokokvalitetnih materijala poput mramora.</p>
+            <a href="#" class="flex items-center gap-2 text-orange-500 leading-none text-lg font-semibold hover:underline">
+                <img src="/assets/vaadin_enter.png" class="size-6 object-cover">
+                Kontakti
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- SECTION 2 -->
+<div class="pt-52 relative">
+    <div class="px-4 container grid grid-cols-2 lg:grid-cols-8 gap-6 lg:items-center mx-auto">
+
+        <div class="col-span-2 lg:col-span-4 lg:col-start-3 flex flex-col items-center" x-data="section2">
+            <h2 class="text-3xl lg:text-6xl font-display uppercase text-center leading-tight text-black mb-8">Ostavite trajan dojam s MEI logo skulpturama</h2>
+            <p class="text-lg lg:text-3xl leading-snug text-black/75 font-light mb-8 text-center">Pretvorite svoj logo u bezvremensko umjetničko djelo.</p>
+            <a href="#" class="flex items-center gap-2 text-orange-500 leading-none text-lg font-semibold hover:underline ">
+                <img src="/assets/vaadin_enter.png" class="size-6 object-cover">
+                Pogledaj radove
+            </a>
+        </div>
+
+    </div>
+    <div class="w-full flex justify-center absolute z-50 top-0 lg:top-52 h-full pb-[450px] lg:pb-[700px]">
+        <div class="px-4 container grid grid-cols-2 lg:grid-cols-8 gap-6 mx-auto">
+            <img src="/assets/render2-(1).jpg" class="aspect-square col-span-1 col-start-2 lg:col-span-2 lg:col-start-7 object-cover opacity-reveal"/>
+
+            <img src="/assets/sc3r3-1.jpg" class="aspect-square col-span-1 lg:col-span-2 object-cover opacity-reveal mt-20 lg:mt-0"/>
+            <div class="col-span-2 lg:col-span-8"></div>
+            <img src="/assets/sc4r1-1.jpg" class="aspect-square col-span-1 col-start-2 lg:col-start-6 object-cover opacity-reveal mt-20 lg:mt-0"/>
+            <img src="/assets/render-3.jpg" class="aspect-video col-span-2 lg:col-start-3 lg:col-span-3 object-cover opacity-reveal mt-20 lg:mt-0"/>
+        </div>
+    </div>
+</div>
+
+<script defer>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('section2', () => ({
+            init() {
+                gsap.registerPlugin(ScrollTrigger);
+
+                gsap.fromTo(this.$el,
+                    { scale: 0.9 },
+                    { 
+                        scale: 1,
+                        scrollTrigger: {
+                            trigger: this.$el,
+                            start: "top+=100 50%", // Offset: 100px down and 75% viewport height
+                            end: `+=${window.innerWidth < 1000 ? '1200' : '1500'}`,         // Pin for 500px of scroll
+                            pin: true,            // Pin the section
+                            scrub: true,          // Smooth animation tied to scroll
+                            markers: true         // Enable markers to debug
+                        }
+                    }
+                );
+            }
+        }));
+    });
+</script>
+
+<div class="px-4 container grid grid-cols-2 lg:grid-cols-8 gap-6 lg:items-center mx-auto pt-8">
+
+    <div class="col-span-2 lg:col-span-4 lg:col-start-3 flex flex-col items-center">
+        <p class="text-lg lg:text-2xl leading-snug text-black/75 font-light text-center">Naše MEI logo skulpture unose identitet vašeg brenda u jedinstveni, opipljivi oblik—idealne su za nagrade zaposlenicima, korporativne poklone ili upečatljiv uredski dekor. Precizno izrađene i dizajnirane s dozom stila, MEI logo skulpture omogućuju vašem brendu da govori sam za sebe, ostavljajući trajan dojam.</p>
+    </div>
+
+</div>
+
+
+
+<!-- SECTION 3 -->
+<img src="/assets/sc3r1-1.jpg" class="aspect-video lg:aspect-[16/7] object-cover w-full mt-20 lg:mt-52">
+
+
+
+<!-- SECTION 4 -->
+<div class="pt-20 lg:pt-52 relative">
+    <div class="px-4 container grid grid-cols-2 lg:grid-cols-8 gap-6 mx-auto">
+
+        <div class="col-span-2 lg:col-span-8 flex flex-col">
+            <h2 class="text-3xl lg:text-8xl font-display uppercase leading-tight text-black mb-8">Uhvatite bit svog brenda uz MEI skulpture s elementima brenda</h2>
+            <p class="text-lg lg:text-2xl leading-snug text-black/75 font-light mb-8 w-full max-w-2xl">Naše MEI logo skulpture unose identitet vašeg brenda u jedinstveni, opipljivi oblik—idealne su za nagrade zaposlenicima, korporativne poklone ili upečatljiv uredski dekor. Precizno izrađene i dizajnirane s dozom stila, MEI logo skulpture omogućuju vašem brendu da govori sam za sebe, ostavljajući trajan dojam.</p>
+            <a href="#" class="flex items-center gap-2 text-orange-500 leading-none text-lg font-semibold hover:underline ">
+                <img src="/assets/vaadin_enter.png" class="size-6 object-cover">
+                Pogledaj radove
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- SECTION 5 -->
+<div class="-mt-10 lg:-mt-56 relative">
+    <div class="px-4 container grid grid-cols-2 lg:grid-cols-8 gap-6 mx-auto" x-data="section5">
+
+        <img src="/assets/render2-(1).jpg" animated class="aspect-video col-span-1 col-start-2 lg:col-start-6 lg:col-span-3 object-cover "/>
+        <img src="/assets/render2-(1).jpg" class="aspect-video col-span-1 lg:col-start-2 lg:col-span-5 object-cover "/>
+        <img src="/assets/render2-(1).jpg" animated class="aspect-square col-span-1 lg:col-span-2 object-cover "/>
+
+    </div>
+</div>
+
+<script defer>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('section5', () => ({
+            init() {
+                gsap.registerPlugin(ScrollTrigger);
+
+                let imagesDOM = this.$root.querySelectorAll('img[animated]');
+                const images = gsap.utils.toArray(imagesDOM);
+
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: this.$el,
+                        start: "top 10%", // Start animation when the container reaches the viewport
+                        end: "+=500",     // End after 500px of scroll
+                        scrub: true,      // Smoothly link animation to scroll
+                        pin: true,        // Pin the container
+                        markers: true     // Enable markers for debugging
+                    }
+                });
+
+                // Animate each image sequentially
+                images.forEach((image, index) => {
+                    tl.fromTo(
+                        image,
+                        { opacity: 0, y: 30 }, // Start with opacity 0 and y-offset
+                        { opacity: 1, y: 0, duration: 1, ease: "power2.out" }, // Fade in and move up
+                        index * 0.5 // Delay each animation by 0.5 seconds
+                    );
+                });
+            }
+        }));
+    });
+</script>
+
+<div class="w-full h-[700px] mt-20 lg:mt-56 border-t border-black/10 flex items-center justify-center">
+    FOOTER WILL BE ADDED SOON
+</div>

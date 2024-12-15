@@ -20,7 +20,7 @@
         <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script> 
 
     </head>
-    <body class="min-h-screen bg-rangitoto-50/15">
+    <body class="min-h-screen bg-[#F5F0ED]">
 
         {{ partial:navigation/header }}
 
@@ -58,6 +58,28 @@
                         scrub: true, // Smooth animation linked to scroll
                         }
                     });
+                });
+
+                const images = document.querySelectorAll('.opacity-reveal');
+
+                images.forEach((image) => {
+                    gsap.fromTo(
+                        image,
+                        { opacity: 0, y: 30 }, // Initial state: hidden and slightly offset
+                        {
+                            opacity: 1,
+                            y: 0,
+                            duration: 1,
+                            ease: "power2.out",
+                            scrollTrigger: {
+                                trigger: image, // Trigger animation when image enters viewport
+                                start: "top 80%", // Trigger when the top of the image is 80% into viewport
+                                end: "top 60%",  // Animation ends before scrolling away
+                                scrub: false,    // Animation plays smoothly without being tied to scroll
+                                once: true       // Animation happens only once
+                            }
+                        }
+                    );
                 });
             });
         </script>

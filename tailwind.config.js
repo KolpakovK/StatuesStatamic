@@ -11,7 +11,8 @@ export default {
     theme: {
         extend: {
             fontFamily:{
-                'sans':["Geist", "sans-serif"]
+                'sans':["Satoshi", "sans"],
+                'display':["Melodrama", "sans"]
             },
             colors:{
                 'rangitoto': {

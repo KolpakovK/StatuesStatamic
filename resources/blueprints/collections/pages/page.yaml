@@ -12,11 +12,6 @@ tabs:
               required: true
               validate:
                 - required
-      -
-        display: 'Page builder'
-        fields:
-          -
-            import: page_builder
   sidebar:
     display: Sidebar
     sections:
