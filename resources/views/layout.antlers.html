@@ -49,13 +49,13 @@
                     const y = window.innerWidth<1000 ? `${-mobileSpeed * 100}%` : `${-speed * 100}%`
 
                     gsap.to(bg, {
-                        y: y, // Move upward based on speed
-                        ease: 'none',
-                        scrollTrigger: {
-                        trigger: bg,
-                        start: 'top bottom', // When bg enters the viewport
-                        end: 'bottom top', // When bg leaves the viewport
-                        scrub: true, // Smooth animation linked to scroll
+                            y: y, // Move upward based on speed
+                            ease: 'none',
+                            scrollTrigger: {
+                            trigger: bg,
+                            start: 'top bottom', // When bg enters the viewport
+                            end: 'bottom top', // When bg leaves the viewport
+                            scrub: true, // Smooth animation linked to scroll
                         }
                     });
                 });
@@ -76,7 +76,6 @@
                                 start: "top 80%", // Trigger when the top of the image is 80% into viewport
                                 end: "top 60%",  // Animation ends before scrolling away
                                 scrub: false,    // Animation plays smoothly without being tied to scroll
-                                once: true       // Animation happens only once
                             }
                         }
                     );

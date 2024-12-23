@@ -1,3 +1,26 @@
+<!-- NAV -->
+<div class=" fixed left-0 top-0 w-full z-[999] flex justify-center py-2 mix-blend-difference">
+    <div class="px-4 container flex items-center gap-4 justify-between">
+        <p class="text-white font-display text-2xl leading-none">MEI</p>
+
+        <div class=" hidden lg:flex items-center gap-3">
+            <a href="#" class="text-white leading-tight text-base font-light hover:underline">Home</a>
+            <p class="text-white leading-tight text-base font-light">/</p>
+            <a href="#" class="text-white leading-tight text-base font-light hover:underline">Link 2</a>
+            <p class="text-white leading-tight text-base font-light">/</p>
+            <a href="#" class="text-white leading-tight text-base font-light hover:underline">Link 3</a>
+        </div>
+
+        <div class="flex lg:hidden">
+            <div class="flex flex-col py-2 justify-between size-8">
+                <div class="h-[2px] w-full bg-white"></div>
+                <div class="h-[2px] w-full bg-white"></div>
+                <div class="h-[2px] w-full bg-white"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- HERO -->
 <div class="h-screen overflow-hidden flex items-center justify-center relative" id="hero">
     <!-- Image with Reveal Mask -->
@@ -21,10 +44,10 @@
         <p class="text-white/75 leading-none text-lg">Date of creation</p>
     </div>
 
-    <div class="absolute right-0 bottom-0 bg-[#F5F0ED] px-8 py-4 flex items-center gap-4">
-        <p class="text-black leading-none text-lg cursor-pointer hover:underline">Instagram</p>
+    <div class="absolute right-0 bottom-0 bg-[#F5F0ED] px-8 py-4 items-center gap-4 hidden lg:flex">
+        <p class="text-black leading-none text-lg cursor-pointer hover:underline">mail@domain.com</p>
         <div class="w-[1px] h-[20px] bg-black"></div>
-        <p class="text-black leading-none text-lg cursor-pointer hover:underline">Facebook</p>
+        <p class="text-black leading-none text-lg cursor-pointer hover:underline">+385 99 9999 999</p>
         <div class="w-[1px] h-[20px] bg-black"></div>
         <p class="text-black leading-none text-lg cursor-pointer hover:underline">Kontakti</p>
     </div>
@@ -101,7 +124,7 @@
 
 <!-- SECTION 2 -->
 <div class="pt-52 relative">
-    <div class="px-4 container grid grid-cols-2 lg:grid-cols-8 gap-6 lg:items-center mx-auto">
+    <div class="px-4 container grid grid-cols-2 lg:grid-cols-8 gap-6 lg:items-center mx-auto z-50 lg:z-auto">
 
         <div class="col-span-2 lg:col-span-4 lg:col-start-3 flex flex-col items-center" x-data="section2">
             <h2 class="text-3xl lg:text-6xl font-display uppercase text-center leading-tight text-black mb-8">Ostavite trajan dojam s MEI logo skulpturama</h2>
@@ -113,14 +136,14 @@
         </div>
 
     </div>
-    <div class="w-full flex justify-center absolute z-50 top-0 lg:top-52 h-full pb-[450px] lg:pb-[700px]">
-        <div class="px-4 container grid grid-cols-2 lg:grid-cols-8 gap-6 mx-auto">
-            <img src="/assets/render2-(1).jpg" class="aspect-square col-span-1 col-start-2 lg:col-span-2 lg:col-start-7 object-cover opacity-reveal"/>
+    <div class="w-full flex justify-center absolute z-20 top-0 lg:top-52 h-full pb-[20px] lg:pb-[700px]">
+        <div class="px-4 container grid grid-cols-4 lg:grid-cols-8 gap-6 mx-auto">
+            <img src="/assets/render2-(1).jpg" class="mt-10 lg:mt-0 aspect-square col-span-1 col-start-1 lg:col-span-2 lg:col-start-7 object-cover opacity-reveal"/>
 
-            <img src="/assets/sc3r3-1.jpg" class="aspect-square col-span-1 lg:col-span-2 object-cover opacity-reveal mt-20 lg:mt-0"/>
-            <div class="col-span-2 lg:col-span-8"></div>
-            <img src="/assets/sc4r1-1.jpg" class="aspect-square col-span-1 col-start-2 lg:col-start-6 object-cover opacity-reveal mt-20 lg:mt-0"/>
-            <img src="/assets/render-3.jpg" class="aspect-video col-span-2 lg:col-start-3 lg:col-span-3 object-cover opacity-reveal mt-20 lg:mt-0"/>
+            <img src="/assets/sc3r3-1.jpg" class="aspect-video lg:aspect-square col-span-2 col-start-3 lg:col-start-1 lg:col-span-2 object-cover opacity-reveal mt-20 lg:mt-0"/>
+            <div class="col-span-2 lg:col-span-8 hidden lg:block"></div>
+            <img src="/assets/sc4r1-1.jpg" class="aspect-square col-span-1 col-start-2 lg:col-start-7 object-cover opacity-reveal"/>
+            <img src="/assets/render-3.jpg" class="aspect-video col-span-2 lg:col-start-1 lg:col-span-3 object-cover opacity-reveal mt-20 lg:mt-0"/>
         </div>
     </div>
 </div>
@@ -138,10 +161,10 @@
                         scrollTrigger: {
                             trigger: this.$el,
                             start: "top+=100 50%", // Offset: 100px down and 75% viewport height
-                            end: `+=${window.innerWidth < 1000 ? '1200' : '1500'}`,         // Pin for 500px of scroll
+                            end: `+=${window.innerWidth < 1000 ? '450' : '1500'}`,         // Pin for 500px of scroll
                             pin: true,            // Pin the section
                             scrub: true,          // Smooth animation tied to scroll
-                            markers: true         // Enable markers to debug
+                            markers: false         // Enable markers to debug
                         }
                     }
                 );
@@ -210,7 +233,7 @@
                         end: "+=500",     // End after 500px of scroll
                         scrub: true,      // Smoothly link animation to scroll
                         pin: true,        // Pin the container
-                        markers: true     // Enable markers for debugging
+                        markers: false     // Enable markers for debugging
                     }
                 });
 
@@ -228,6 +251,44 @@
     });
 </script>
 
-<div class="w-full h-[700px] mt-20 lg:mt-56 border-t border-black/10 flex items-center justify-center">
-    FOOTER WILL BE ADDED SOON
+<div class="w-full mt-20 lg:mt-56 border-t border-black/10 flex items-center justify-center">
+    <div class="px-4 container grid grid-cols-4 lg:grid-cols-8 gap-12 lg:gap-6 py-12">
+        <div class="col-span-4 lg:col-span-2 lg:col-start-2 flex flex-col gap-6 lg:gap-12">
+            <p class="text-2xl lg:text-6xl font-display leading-tight uppercase">Contact us</p>
+
+            <div class="flex flex-col gap-4">
+                <input type="text" class="text-lg py-2 border-b border-black/10 bg-transparent" placeholder="Full Name*">
+                <input type="text" class="text-lg py-2 border-b border-black/10 bg-transparent" placeholder="Phone Number*">
+                <input type="text" class="text-lg py-2 border-b border-black/10 bg-transparent" placeholder="Email">
+                <textarea class="text-lg py-2 border-b border-black/10 bg-transparent resize-none" placeholder="Message*"></textarea>
+                <a href="#" class="flex items-center gap-2 text-orange-500 leading-none text-lg font-semibold hover:underline mt-8">
+                    <img src="/assets/vaadin_enter.png" class="size-6 object-cover">
+                    Send application
+                </a>
+            </div>
+        </div>
+
+
+        <div class="col-span-4 lg:col-span-3 lg:col-start-5 flex flex-col gap-12 justify-between">
+            <div class="flex flex-col gap-6 lg:gap-12">
+                <p class="text-2xl lg:text-6xl font-display leading-tight uppercase">Corporate info</p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 gap-y-4">
+                    <p class="text-lg text-black leading-tight">Any corporate data you would like to display</p>
+                    <p class="text-lg text-black leading-tight">Any corporate data you would like to display</p>
+                    <p class="text-lg text-black leading-tight">Any corporate data you would like to display</p>
+                    <p class="text-lg text-black leading-tight">Any corporate data you would like to display</p>
+                    <p class="text-lg text-black leading-tight">Any corporate data you would like to display</p>
+                </div>
+            </div>
+
+            <div class="items-center gap-4 hidden lg:flex">
+                <p class="text-black leading-none text-lg cursor-pointer hover:underline">mail@domain.com</p>
+                <div class="w-[1px] h-[20px] bg-black"></div>
+                <p class="text-black leading-none text-lg cursor-pointer hover:underline">+385 99 9999 999</p>
+                <div class="w-[1px] h-[20px] bg-black"></div>
+                <p class="text-black leading-none text-lg cursor-pointer hover:underline">Kontakti</p>
+            </div>
+        </div>
+    </div>
 </div>
